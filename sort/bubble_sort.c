@@ -11,9 +11,10 @@ int main(void) {
             swapped = 0;
             if (idx > 0 && a[idx] < a[idx - 1]) {
                 int tmp = a[idx];
-                a[idx] = a[--idx];
-                a[idx] = tmp;
+                a[idx] = a[idx - 1];
+                a[idx - 1] = tmp;
                 swapped = 1;    
+                idx--;
             }
         }
     }
