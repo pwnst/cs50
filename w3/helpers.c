@@ -25,13 +25,12 @@ bool b_search(int value, int values[], int min, int max) {
     }
 
     int mid = ((max - min) / 2) + min;
+
     if (values[mid] < value) {
         return b_search(value, values, mid + 1, max);
-    }
-    else if (values[mid] > value) {
+    } else if (values[mid] > value) {
         return b_search(value, values, min, mid);
-    }
-    else {
+    } else {
         return true;
     }
 }
@@ -56,3 +55,4 @@ void sort(int values[], int n) {
     }
     return;
 }
+
